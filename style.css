@@ -1,14 +1,141 @@
+/* RESET CSS */
+
+/* 1. Use a more-intuitive box-sizing model */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* 2. Remove default margin */
+* {
+    margin: 0;
+}
+
+/* 3. Enable keyword animations */
+@media (prefers-reduced-motion: no-preference) {
+    html {
+        interpolate-size: allow-keywords;
+    }
+}
+
+body {
+    /* 4. Add accessible line-height */
+    line-height: 1.5;
+    /* 5. Improve text rendering */
+    -webkit-font-smoothing: antialiased;
+}
+
+/* 6. Improve media defaults */
+img,
+picture,
+video,
+canvas,
+svg {
+    display: block;
+    max-width: 100%;
+}
+
+/* 7. Inherit fonts for form controls */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* 8. Avoid text overflows */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    overflow-wrap: break-word;
+}
+
+/* 9. Improve line wrapping */
+p {
+    text-wrap: pretty;
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    text-wrap: balance;
+}
+
+/*
+10. Create a root stacking context
+*/
+#root,
+#__next {
+    isolation: isolate;
+}
+
+/* Presentation Maxime Boulenger */
+
+.presentation-maxime {
+    background-color: #424549;
+    color: rgb(242, 242, 242);
+    font-family: Arial, sans-serif;
+    padding: 2em 0;
+    
+    h2 {
+        font-size: 3em;
+        text-align: center;
+    }
+    
+    .talent-container {
+        display: flex;
+        justify-content: center;
+        gap: 5em;
+        margin-bottom: 2em;
+    }
+    
+    /* Liste */
+    .list {
+        display: flex;
+        flex-direction: column;
+        gap: 0.8em;
+        padding: 0;
+        margin: 0;
+        width: 20%;
+        
+        h3 {
+            font-size: 2em;
+            text-align: center;
+        }
+        
+        p {
+            font-size: 1.4em;
+            text-align: center;
+        }
+    }
+    
+    .paragraphe {
+        font-size: 1.5em;
+        margin-bottom: 1em;
+        text-align: center;
+        width: 60%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 /* Style horrible pour la section Bastien */
 #presentation_bastien {
-    background-color: lime;           /* vert fluo agressif */
-    color: red;                        /* texte rouge vif qui pique les yeux */
-    border: 10px dotted magenta;       /* grosse bordure flashy */
+    background-color: lime; /* vert fluo agressif */
+    color: red; /* texte rouge vif qui pique les yeux */
+    border: 10px dotted magenta; /* grosse bordure flashy */
     padding: 40px;
     margin: 50px;
     font-family: "Comic Sans MS", cursive; /* police détestée */
     text-align: center;
-    box-shadow: 15px 15px 0 yellow;    /* ombre épaisse jaune criarde */
-    transform: rotate(2deg);           /* léger tilt qui dérange */
+    box-shadow: 15px 15px 0 yellow; /* ombre épaisse jaune criarde */
+    transform: rotate(2deg); /* léger tilt qui dérange */
 }
 
 /* Titres moches et disproportionnés */
@@ -17,11 +144,11 @@
     text-transform: uppercase;
     text-decoration: underline overline wavy blue;
     background: repeating-linear-gradient(
-        45deg,
-        orange,
-        orange 10px,
-        purple 10px,
-        purple 20px
+    45deg,
+    orange,
+    orange 10px,
+    purple 10px,
+    purple 20px
     ); /* fond rayé horrible */
     padding: 10px;
 }
@@ -44,13 +171,14 @@
 /* Paragraphe final agressif */
 #presentation_bastien .about-me {
     font-size: 20px;
-    letter-spacing: 5px;       /* espace énorme entre les lettres */
-    line-height: 10px;         /* trop serré verticalement */
+    letter-spacing: 5px; /* espace énorme entre les lettres */
+    line-height: 10px; /* trop serré verticalement */
     background: repeating-radial-gradient(circle, red, green 10px, blue 20px);
     border: 8px dashed black;
     padding: 20px;
-    color : white;
-/* Style partie de Mohamed */
+    color: white;
+    /* Style partie de Mohamed */
+}
 
 section:nth-of-type(3) {
     max-width: 700px;
